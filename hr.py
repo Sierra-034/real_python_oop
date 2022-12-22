@@ -5,6 +5,9 @@ class PayrollSystem:
         for employee in employees:
             print(f'Payroll for: {employee.id} - {employee.name}')
             print(f'- Check Amount: {employee.calculate_payroll()}', end='\n')
+            if employee.address:
+                print('- Sent to:')
+                print(employee.address, end='\n\n')
 
 class SalaryPolicy:
     def __init__(self, weekly_salary) -> None:
